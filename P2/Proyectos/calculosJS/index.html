@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Calculadora Web</title>
+</head>
+<body>
+    <!--<img  src="pexels-japon.jpg" alt="Imagen de japon" class="fondo">-->
+    <script src="operaciones.js"></script>
+    <div class="formulario">
+        <h2>.:Calculadora basica:.</h2>
+        <hr>
+        <form action="Calcular" class="formulario">
+            <label for="n1" >Numero 1</label>
+            <input id="n1" type="number" class="caja1" ><br>
+            <label for="n2" >Numero 2</label>
+            <input id="n2" type="number" class="caja2"><br>
+            <label for="tipo">Tipo de operacion</label>
+            <select class="caja" name="tipoope" id="ope">
+                <option value="+">Suma</option>
+                <option value="-">Resta</option>
+                <option value="*">Multiplicacion</option>
+                <option value="/">Division</option>
+            </select><br>
+            <input id="boton" type="button"  value="Calcular" onclick="operacion()">
+        </form>
+        <hr>
+        <div id="resultado"></div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+.formulario{
+    height: 90%;
+    height: 90%;
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #ffffff;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    
+}
+
+body{
+    background-image: url(pexels-japon.jpg);
+    background-size: 1580px 950px;
+    padding: 15%;
+    height: 10vmax;
+}
+
+#contenedor{
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2{
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    font-size: 4vw;
+    text-align: center;
+    font-weight: normal;
+    font-style: italic;
+}
+
+hr{
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+}
+br{
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+}
+
+form{
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.caja1{
+    color: black;
+    font-weight: bold;
+    font-size: 1vw;
+    width: 5%;
+}
+.caja2{
+    color: black;
+    font-weight: bold;
+    font-size: 1vw;
+    width: 5%;
+}
+
+.caja{
+    color: black;
+    font-weight: bold;
+    font-size: 1vw;
+    width: auto;
+}
+
+#boton:hover{
+    margin-top: 2vw;
+    padding: 2vw;
+    background-color: rgb(143, 143, 235);
+    border-radius: 100%;
+    border: 2px solid rgb(111, 111, 212);
+
+}

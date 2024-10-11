@@ -7,11 +7,15 @@ Estos son los temas de HTML Repaso
   4.- Textos
   5.- Listas
   6.- Imagenes
-  7.- Formularios
-  8.- Enlaces o Hipervinculos (links)
+  8.- Tablas
+  9.- Formularios
+  10.- Enlaces o Hipervinculos (links)
+  11.- contenido Embebido
 
 ** CSS **
-  9.- CSS
+   11.- CSS 
 
 ** JS **
-   10.- JavaScript
+   12.- JavaScript 
+ 
+
