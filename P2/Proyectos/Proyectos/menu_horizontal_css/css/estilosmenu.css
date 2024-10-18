@@ -1,0 +1,96 @@
+/* Estilos aplicados para crear el menu horizontal en CSS */
+#index{
+    background-color: silver;
+    padding: 2rem;;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: white;
+    /*font-style: italic;
+    font-weight: bold;*/
+    font-size: 5vmin;
+    /*
+    display: none; es para ocultar oh esconder cualquier elemento
+    */
+} 
+header{
+    width: 100%;
+    background-color: cadetblue;
+    position: sticky;
+    top: 0%;
+}
+
+#btn-menu{
+    display: none;
+}
+
+header label{
+    width: 2rem;
+    height: 2rem;
+    padding: 1rem;
+    border-right: 1px solid white;
+    display: none;
+}
+header label:hover{
+    cursor: pointer;/*para los botones ponerle un apuntador*/
+}
+
+#menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+#menu li{
+    flex-grow: 1;
+    text-align: center;
+    border: 1px solid rgb(185, 209, 209);
+}
+#menu li a{
+    text-decoration: none;
+    display: block;
+    padding: 1rem 1rem;
+    color: white;
+}
+#menu li a:hover{
+    background-color: rgba(11, 61, 78, 0.4);
+}
+#menu li a:active{
+    background-color: rgba(9, 106, 139, 0.4);
+}
+/*aplicar los estilos con la barra de navegacion con media query
+para que el menu se oculte y sea desplegable*/
+
+@media screen and (max-width:768px){
+    
+    header label{
+        display: block;
+    }
+    #menu{
+        position: absolute;
+        background-color: cadetblue;
+        width: 20%;
+        margin-left: -20%;
+        transition: all 0.5s;
+    }
+    #menu ul{
+        flex-direction: column;
+    }
+
+    #menu li{
+        text-align: left;
+        border: 1px solid white;
+    }
+    /*utilizar elinput checkbox paracomtrolar el menu aparesca o desaparesca*/
+    /*condicion de css*/
+    #btn-menu:checked ~ #menu{
+        margin-left: 0%;
+    }
+
+    main{
+        margin: 1rem;
+    }
+    main p{
+        margin: 1rem;
+    }
+}
