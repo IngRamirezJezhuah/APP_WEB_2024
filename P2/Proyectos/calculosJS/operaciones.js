@@ -23,7 +23,6 @@ function operacion() {
 //            res = `${n1} / ${n2} = ${ope}`;
 //            break;
 //    }
-
 //version debugeada segun el profe
 
     if (!isNaN(n1) && !isNaN(n2)) {
