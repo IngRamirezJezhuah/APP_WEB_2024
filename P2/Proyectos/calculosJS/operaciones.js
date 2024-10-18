@@ -1,14 +1,11 @@
 function operacion() {
-    let n1,n2,tipoope,res,resultado;
+    let n1, n2, tipoope, res, resultado;
+    
     n1 = parseFloat(document.getElementById("n1").value);
     n2 = parseFloat(document.getElementById("n2").value);
     tipoope = document.getElementById("ope").value.toLowerCase();
-    res;
 
-    
-    
-
-//    switch (tipoope) {
+    //    switch (tipoope) {
 //        case 'suma':
 //            ope = n1 + n2;
 //            res = `${n1} + ${n2} = ${ope}`;
@@ -28,31 +25,29 @@ function operacion() {
 //    }
 
 //version debugeada segun el profe
-    
-    //if (isNumber(n1) && isNumber(n2)){
 
+    if (!isNaN(n1) && !isNaN(n2)) {
         switch (tipoope) {
             case '+':
-                res = n1 + n2 ;
+                res = n1 + n2;
                 break;
             case '-':
-                res = n1 - n2 ;
+                res = n1 - n2;
                 break;
             case '*':
-                res = n1 * n2 ;
+                res = n1 * n2;
                 break;
             case '/':
-                res = n1 / n2 ;
+                res = n1 / n2;
                 break;
+            default:
+                res = "Operación no válida";
         }
-        resultado = document.getElementById("resultado").innerHTML = `<h2>${n1} ${tipoope} ${n2} = ${res}</h2>`;
-        //resultado.innerHTML = `<h2>${res}</h2>`;
-    //}
-    //else
-     //   alert("Ingrese solo numeros por favor ...");
-    
+        
+        resultado = document.getElementById("resultado");
+        resultado.innerHTML = `<h2>${n1} ${tipoope} ${n2} = ${res}</h2>`;
+    } else {
+        resultado = document.getElementById("resultado");
+        resultado.innerHTML = `<h2>Error: Ingrese solo números válidos</h2>`;
+    }
 }
-
-//function isNumber(n){
-//    return isNaN(parseInt(n)&& isFinite(n));
-//}
