@@ -1,0 +1,33 @@
+{% block body %}
+    <h1>!Ups Ocurrio un error!</h1>
+    <h1>!Error 404!</h1>
+    <img class="imagen" src="https://img.desmotivaciones.es/201109/Sinttulo_647.jpg" alt="404">
+    <style>
+        h1{
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        .imagen{
+            padding: 2rem 30rem 2rem 25rem;
+        }
+        body{
+            background-color: black;
+        }
+    </style>
+
+{% endblock body %}
+    
+
+
+
+    
+{% comment "hashashas" %}
+<img src="{% static "/static/img/Pelo_Azul.jpg" %}" alt="Imagen Django" title="Django">
+{% block content %}
+        <script> 
+            alert('estapagina no existe,lo voy a mandar a la pagina de inicio');
+            location.href='{% url "inicio" %}'
+        </script>
+{% endblock content %}
+{% endcomment %}
+

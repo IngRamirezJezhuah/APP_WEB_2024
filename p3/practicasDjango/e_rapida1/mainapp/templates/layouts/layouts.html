@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% endblock title %}|Django Proyecto UTD
+    </title>
+</head>
+<body>
+    <header>
+        <div id="logotipo">
+            <h1>Django Proyecto Web</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url "inicio" %}" >Inicio</a></li>
+            <li><a href="{% url "mision" %}" >Mision</a></li>
+            <li><a href="{% url "vision" %}" >Vision</a></li>
+            <li><a href="{% url "acercade" %}">Acerca de</a></li>
+        </ul>
+    </nav>
+    <section id="content">
+        <div class="box">
+            {% block content %}{% endblock content %}
+        </div>
+    </section>
+    <footer>
+        <p>Django con DJxs4n 2024</p>
+    </footer>
+</body>
+</html>
