@@ -18,11 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import handler404
 from mainapp import views
+from django.conf import settings
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('mainapp.urls')),
+    path('',include('articulos.urls')),
 ]
 
 #forma 1
@@ -30,3 +32,10 @@ urlpatterns = [
 
 #fomra 2
 handler404 = 'mainapp.views.error404_2'
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns +=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+if not settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

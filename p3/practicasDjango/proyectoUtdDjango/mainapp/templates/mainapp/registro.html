@@ -1,0 +1,19 @@
+{% extends "layouts/layouts.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock title %}
+
+{% block content %}
+    <h1>{{title}}</h1>
+    {{register_form.errors}}
+        <form action="" method="POST">
+            {% csrf_token %}
+            <!--{{register_form.as_p}}-->
+            {% for field in register_form  %}
+            <label>{{field.label}}</label><!--esto es para que haga un for y se muestre los campos como texto-->
+                {{field}}
+            {% endfor %}
+            <input type="submit" value="Registrarse" />
+        </form>
+{% endblock content %}

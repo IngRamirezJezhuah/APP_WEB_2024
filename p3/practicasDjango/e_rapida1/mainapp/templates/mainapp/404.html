@@ -1,0 +1,12 @@
+{% block body %}
+{% block content %}
+<script> 
+    alert('estapagina no existe,lo voy a mandar a la pagina de inicio');
+    location.href='{% url "inicio" %}'
+</script>
+{% endblock content %}
+{% endblock body %}
+    
+
+
+
